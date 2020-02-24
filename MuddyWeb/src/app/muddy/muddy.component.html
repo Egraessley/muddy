@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="weather-box">
+        <div *ngIf="!weather"><i class="fa fa-spinner"></i><br />Loading Weather</div>
+        <div *ngIf="weather">
+          <h1></h1>
+          <div *ngIf="muddy">
+            <h2>BOO</h2>
+            <fa-icon [icon]="faFrown" size="4x"></fa-icon>
+            <br />
+            <span class="info-text">It's going to be muddy</span>
+          </div>
+          <div *ngIf="!muddy">
+            <h2>YAY</h2>
+            <fa-icon [icon]="faSmile" size="4x"></fa-icon>
+            <br />
+            <span class="info-text">It's going not to be muddy</span>
+          </div>
+        </div>
+      </div>
+    </div><!--col-4-->
+    <div class="col-4"></div>
+  </div><!--row-->
+</div><!--container-->
